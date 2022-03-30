@@ -17,5 +17,6 @@ struct Result: Codable {
     let backdrop_path: String?
     let originalTitle, overview: String?
     let popularity: Double?
-    let posterPath, releaseDate, title: String?
+    let posterPath, release_date, title: String?
+    let vote_average : Double?
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel = ViewModel()
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
-
+    
+    
 }
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
@@ -46,6 +46,12 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "InformationViewController") as? InformationViewController
+        vc?.configCell(result: moviesData?.results[indexPath.row])
+        navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     
 }
 extension UIImageView {
@@ -57,7 +63,7 @@ extension UIImageView {
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
                 let data = data, error == nil,
                 let image = UIImage(data: data)
-                else { return }
+            else { return }
             DispatchQueue.main.async() { [weak self] in
                 self?.image = image
             }
