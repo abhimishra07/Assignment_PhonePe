@@ -14,6 +14,7 @@ struct Movies: Codable {
 
 struct Result: Codable {
     let id: Int
+    let backdrop_path: String?
     let originalTitle, overview: String?
     let popularity: Double?
     let posterPath, releaseDate, title: String?

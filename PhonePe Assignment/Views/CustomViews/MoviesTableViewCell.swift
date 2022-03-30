@@ -11,6 +11,7 @@ class MoviesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var moviePosterImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,8 +28,10 @@ class MoviesTableViewCell: UITableViewCell {
         if let description = result.overview {
             descriptionLabel.text = description
         }
-        print(result.title)
-        print(result.overview)
+        if let image = result.backdrop_path {
+            moviePosterImageView.downloaded(from:"https://image.tmdb.org/t/p/w500" + image  )
+        }
+      
     }
     
 }

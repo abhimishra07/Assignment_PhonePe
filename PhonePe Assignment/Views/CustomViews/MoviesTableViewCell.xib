@@ -16,32 +16,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="351" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCz-lI-hlF">
-                        <rect key="frame" x="16" y="17" width="320" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCz-lI-hlF">
+                        <rect key="frame" x="156" y="17" width="180" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-6a-Grf">
-                        <rect key="frame" x="16" y="60.5" width="320" height="20.5"/>
+                        <rect key="frame" x="156" y="61.5" width="180" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ni-8q-oks">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="107"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="HLI-vL-yFR"/>
+                            <constraint firstAttribute="height" constant="107" id="mPi-os-uom"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="PCz-lI-hlF" secondAttribute="trailing" constant="15" id="0St-YQ-GEe"/>
-                    <constraint firstItem="v4e-6a-Grf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HD7-rm-tUY"/>
+                    <constraint firstItem="PCz-lI-hlF" firstAttribute="leading" secondItem="6ni-8q-oks" secondAttribute="trailing" constant="36" id="738-56-zpw"/>
                     <constraint firstItem="v4e-6a-Grf" firstAttribute="top" secondItem="PCz-lI-hlF" secondAttribute="bottom" constant="23" id="Uum-NL-a4n"/>
                     <constraint firstItem="PCz-lI-hlF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="VFV-3Y-v5j"/>
-                    <constraint firstAttribute="bottom" secondItem="v4e-6a-Grf" secondAttribute="bottom" constant="26" id="aiD-Nr-MHS"/>
+                    <constraint firstAttribute="bottom" secondItem="v4e-6a-Grf" secondAttribute="bottom" constant="25" id="aiD-Nr-MHS"/>
+                    <constraint firstItem="6ni-8q-oks" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pnp-7Q-qjn"/>
+                    <constraint firstItem="6ni-8q-oks" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qHa-O6-eHp"/>
                     <constraint firstAttribute="trailing" secondItem="v4e-6a-Grf" secondAttribute="trailing" constant="15" id="qWQ-iy-mbV"/>
-                    <constraint firstItem="PCz-lI-hlF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vIn-gD-Kiq"/>
+                    <constraint firstItem="v4e-6a-Grf" firstAttribute="leading" secondItem="6ni-8q-oks" secondAttribute="trailing" constant="36" id="wLY-no-HRy"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="v4e-6a-Grf" id="Eka-Ia-4g0"/>
+                <outlet property="moviePosterImageView" destination="6ni-8q-oks" id="dE5-bW-PDm"/>
                 <outlet property="titleLabel" destination="PCz-lI-hlF" id="BMK-sG-pvi"/>
             </connections>
             <point key="canvasLocation" x="160.1449275362319" y="60.602678571428569"/>

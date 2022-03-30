@@ -16,6 +16,7 @@ public class Parser {
                 let data = try Data(contentsOf: fileLocation)
                 let jsonDecoder = JSONDecoder()
                 let dataFromJson = try jsonDecoder.decode(Movies.self, from: data)
+                print(dataFromJson)
                 completionHandler(dataFromJson)
             }
             catch {
